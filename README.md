@@ -54,7 +54,9 @@ vcfCompressor -h
 
 To calculate the compression ratio, you can use the formula:
 
-\[ \text{Compression Ratio} = \frac{\text{Original Size}}{\text{Compressed Size}} \]
+```math
+\text{Compression Ratio} = \frac{\text{Original Size}}{\text{Compressed Size}} 
+```
 
 Given the sizes:
 - Original size: 445.8 MB
@@ -63,21 +65,22 @@ Given the sizes:
 - vcfCompressor + Zip size: 547.4 KB
 
 ### Zip Compression Ratio
-
-\[ \text{Zip Compression Ratio} = \frac{445.8 \, \text{MB}}{9.2 \, \text{MB}} = 48.46 \]
-
+```math
+ \text{Zip Compression Ratio} = \frac{445.8 \, \text{MB}}{9.2 \, \text{MB}} = 48.46 
+```
 ### vcfCompressor Compression Ratio
-
-\[ \text{vcfCompressor Compression Ratio} = \frac{445.8 \, \text{MB}}{27.1 \, \text{MB}} = 16.45 \]
-
+```math
+\text{vcfCompressor Compression Ratio} = \frac{445.8 \, \text{MB}}{27.1 \, \text{MB}} = 16.45 
+```
 ### vcfCompressor + Zip Compression Ratio
 
 Since the vcfCompressor + Zip size is in kilobytes, we need to convert it to megabytes for a consistent comparison:
 
-\[ 547.4 \, \text{KB} = 0.5474 \, \text{MB} \]
+```math
+ 547.4 \, \text{KB} = 0.5474 \, \text{MB}
 
-\[ \text{vcfCompressor + Zip Compression Ratio} = \frac{445.8 \, \text{MB}}{0.5474 \, \text{MB}} = 814.54 \]
-
+ \text{vcfCompressor + Zip Compression Ratio} = \frac{445.8 \, \text{MB}}{0.5474 \, \text{MB}} = 814.54 
+```
 ### Summary
 
 - **Zip Compression Ratio**: 48.46
