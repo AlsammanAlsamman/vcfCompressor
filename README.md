@@ -83,9 +83,9 @@ Since the vcfCompressor + Zip size is in kilobytes, we need to convert it to meg
 ```
 ### Summary
 
-- **Zip Compression Ratio**: 48.46
-- **vcfCompressor Compression Ratio**: 16.45
-- **vcfCompressor + Zip Compression Ratio**: 814.54
+- **Zip Compression Ratio**: 48.46%
+- **vcfCompressor Compression Ratio**: 16.45%
+- **vcfCompressor + Zip Compression Ratio**: 814.54%
 
 
 ## Building the Program

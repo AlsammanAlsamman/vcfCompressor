@@ -52,78 +52,12 @@ char* getFilenameWithoutExtension(const char* filepath) {
     return result;
 }
 
-// int main() {
-//     char *vcf_filename = "sampleData/Barley.vcf";
-//     char *output_filename = getFilenameWithoutExtension(vcf_filename);
 
-//     // create 3 three output files using 
-//     // 1. binary file
-//     // 2. sample names file
-//     // 3. marker info file
-//     // char *binary_filename = "sampleData/Barley.bin";
-//     printf("Reading This vcf File %s\n", vcf_filename);
-//     // create the binary file name
-//     char binary_filename[100];
-//     sprintf(binary_filename, "%s.bin", output_filename);
-//     printf("Binary File Name %s\n", binary_filename);
-//     // create the sample names file name
-//     char sample_filename[100];
-//     sprintf(sample_filename, "%s_samples.txt", output_filename);
-//     printf("Sample File Name %s\n", sample_filename);
-//     // create the marker info file name
-//     char marker_filename[100];
-//     sprintf(marker_filename, "%s_markers.txt", output_filename);
-//     printf("Marker File Name %s\n", marker_filename);
-
-
-//     //Number of taxa: 554
-//     // Number of sites: 2388
-//     Parameters params ={
-//         .vcf_filename = vcf_filename,
-//         .output_filename = output_filename,
-//         .marker_size = 2388,
-//         .sample_size = 554,
-//     };
-//     vcfinfo *vcf = readVCF(&params);
-//     // the binary file will be saved in the same directory as the vcf file
-//     matrix2binary(vcf->matrix, vcf->marker_size, vcf->sample_size, binary_filename);
-//     // write sample names to a file
-//     writeSampleNames(vcf, sample_filename);
-//     // write the marker info to a file
-//     printMarkerInfo(vcf, marker_filename);
-//     // free the vcf info
-//     freeVCFInfo(vcf);
-
-
-//     // This should be user input
-//     char *binary_filename_in = "sampleData/Barley.bin";
-//     char *marker_filename_in = "sampleData/Barley_markers.txt";
-//     char *sample_filename_in = "sampleData/Barley_samples.txt";
-
-//     // output file name
-//     char *output_filename_in = "sampleData/Barley_reconstructed.vcf";
-
-//     // init new vcf
-//     vcfinfo *new_vcf = initVCF(&params);
-//     // // read the marker info
-//     readMarkerInfo(new_vcf, marker_filename_in);
-//     // // // read the sample names from the file
-//     readSampleNames(new_vcf, sample_filename_in);
-//     // // // load the matrix from the binary file
-//     binary2matrix(new_vcf->matrix, new_vcf->marker_size, new_vcf->sample_size, binary_filename_in);
-//     // // // // reconstruct the vcf file
-//     reconstructVCF(new_vcf, output_filename_in);
-
-//     // free the vcf info
-//     freeVCFInfo(new_vcf);
-//     // free
-//     printf("Reading This vcf File %s\n", vcf_filename);
-// }
 void printUsage(const char* programName) {
     printf("Usage:\n");
-    printf("  %s -c <vcf_filename> -ns <num_samples> -nm <num_markers>                 Compress the VCF file\n", programName);
-    printf("  %s -r -b <binary_file> -m <marker_file> -s <sample_file> -o <output_vcf> -ns <num_samples> -nm <num_markers>  Reconstruct the VCF file\n", programName);
-    printf("  %s -h | --help                            Display this help message\n", programName);
+    printf("  %s -c <vcf_filename> -ns             Compress the VCF file\n", programName);
+    printf("  %s -r -b <binary_file> -m <marker_file> -s <sample_file> -o <output_vcf>   Reconstruct the VCF file\n", programName);
+    printf("  %s -h | --help                       Display this help message\n", programName);
 }
 
 int main(int argc, char *argv[]) {
