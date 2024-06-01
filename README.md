@@ -135,7 +135,3 @@ Ther is no publication yet. Please cite this repository if you use this tool.
 - A.Alsamman[at]cgiar.org
 - samman.mohammed[at]gmail.com
 - smahmoud[at]ageri.sci.eg
-
-## Acknowledgments
-
-- Any acknowledgments you want to include
